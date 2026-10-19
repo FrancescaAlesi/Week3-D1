@@ -273,6 +273,17 @@ console.log(`Utenti attivi: ${attivi}`);
 
 console.log(`----ESERCIZIO-14----`);
 
+const perEta = [...utenti]
+    .sort((a, b) => a.eta - b.eta)
+    .map(utenti => utenti.nome);
+
+console.log("a) Per età crescente:", perEta);
+
+const nomiAlfabetico = [...utenti]
+  .sort((a, b) => a.nome.localeCompare(b.nome))
+  .map(utenti => utenti.nome);
+
+console.log("b) In ordine alfabetico:", nomiAlfabetico);
 
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
@@ -285,3 +296,10 @@ console.log(`----ESERCIZIO-14----`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 console.log(`----ESERCIZIO-15----`);
+
+const utentiAttiviOrdinati = utenti
+  .filter(utenti => utenti.attivo)
+  .map(utenti => `${utenti.nome} ${utenti.cognome}`)
+  .sort((a, b) => a.localeCompare(b));
+
+console.log(utentiAttiviOrdinati);
