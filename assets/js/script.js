@@ -277,13 +277,13 @@ const perEta = [...utenti]
     .sort((a, b) => a.eta - b.eta)
     .map(utenti => utenti.nome);
 
-console.log("a) Per età crescente:", perEta);
+console.log(`Per età crescente:`, perEta);
 
 const nomiAlfabetico = [...utenti]
   .sort((a, b) => a.nome.localeCompare(b.nome))
   .map(utenti => utenti.nome);
 
-console.log("b) In ordine alfabetico:", nomiAlfabetico);
+console.log(`In ordine alfabetico:`, nomiAlfabetico);
 
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
